@@ -1,0 +1,22 @@
+line{
+    stroke: #000000;
+    stroke-width: 1;
+}
+pattern polygon{
+    stroke: black;
+    fill: #202020;
+}
+
+#left_cap{
+    width: 25px;
+    height: 600px;
+}
+#inner_triangles{
+    width: 50px; 
+    height: 86px; 
+    overflow: visible;
+}
+#right_cap{
+    width: 25px;
+    height: 600px;
+}
