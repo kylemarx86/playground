@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="dynamic triangle display final">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>triangle logo</title>
+</head>
+<body>
+  <svg width='1800px' height='600px' id='canvas'>
+    <defs>
+      <pattern id='inner_triangles' width='50px' height='86px' patternUnits='userSpaceOnUse'>
+        <rect  width='50px' height='86px' fill='#202020'/> -->
+        <line x1="0" y1="0" x2="50" y2="0"  />
+        <line x1="0" y1="0" x2="50" y2="86" />
+        <line x1="50" y1="0" x2="0" y2="86" />
+        <line x1="0" y1="43" x2="50" y2="43" />
+        <line x1="0" y1="86" x2="50" y2="86" />
+      </pattern>
+    </defs>
+    <rect width='1800px' height='600px' fill='url(#inner_triangles)'/>
+  </svg>
+</body>
+</html>
