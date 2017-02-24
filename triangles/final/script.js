@@ -1,7 +1,10 @@
 $(document).ready(function(){
    drawTriangles();
+   scaleDown();
 });
-
+function scaleDown(){
+  $('#main').attr('transform', "scale(0.125)");
+}
 function drawTriangles(){
   //draw k
   drawPoly(1,6);
@@ -144,7 +147,8 @@ function drawPoly(row, column) {
     points =  getPolyPoints(row, column);
     poly.setAttribute("points", points);
   
-    $('#canvas').append(poly);
+    // $('#canvas').append(poly);
+    $('#main').append(poly);
 }
 
 function getPolyPoints(row, column){
