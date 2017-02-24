@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 function drawTriangles(){
-    //draw k
+  //draw k
   drawPoly(1,6);
   drawPoly(1,7);
   drawPoly(2,5);
@@ -25,7 +25,7 @@ function drawTriangles(){
   drawPoly(6,6);
   drawPoly(6,7);
 
-    //draw y
+  //draw y
   drawPoly(4,12);
   drawPoly(4,13);
   drawPoly(5,13);
@@ -43,8 +43,8 @@ function drawTriangles(){
   drawPoly(8,14);
   drawPoly(9,12);
   drawPoly(9,13);
-  
-//draw l
+    
+  //draw l
   drawPoly(6,19);
   drawPoly(6,20);
   drawPoly(5,20);
@@ -58,8 +58,8 @@ function drawTriangles(){
   drawPoly(1,24);
   drawPoly(1,25);
 
-//draw e
-   drawPoly(6,26);
+  //draw e
+  drawPoly(6,26);
   drawPoly(6,27);
   drawPoly(5,25);
   drawPoly(5,26);
@@ -72,72 +72,70 @@ function drawTriangles(){
   drawPoly(3,29);
   drawPoly(3,30);
   drawPoly(4,30);
-drawPoly(4,29);
-drawPoly(5,29);
-  
+  drawPoly(4,29);
+  drawPoly(5,29);
 
-//draw m
-drawPoly(6,35);
-drawPoly(6,36);
-drawPoly(5,36);
-drawPoly(5,37);
-drawPoly(4,37);
-drawPoly(4,38);
-drawPoly(3,38);
-drawPoly(4,39);
-drawPoly(4,40);
-drawPoly(4,41);
-drawPoly(5,41);
-drawPoly(5,40);
-drawPoly(6,40);
-drawPoly(6,39);
-drawPoly(4,43);
-drawPoly(4,44);
-drawPoly(4,45);
-drawPoly(5,45);
-drawPoly(5,44);
-drawPoly(6,44);
-drawPoly(6,43);
+  //draw m
+  drawPoly(6,35);
+  drawPoly(6,36);
+  drawPoly(5,36);
+  drawPoly(5,37);
+  drawPoly(4,37);
+  drawPoly(4,38);
+  drawPoly(3,38);
+  drawPoly(4,39);
+  drawPoly(4,40);
+  drawPoly(4,41);
+  drawPoly(5,41);
+  drawPoly(5,40);
+  drawPoly(6,40);
+  drawPoly(6,39);
+  drawPoly(4,43);
+  drawPoly(4,44);
+  drawPoly(4,45);
+  drawPoly(5,45);
+  drawPoly(5,44);
+  drawPoly(6,44);
+  drawPoly(6,43);
 
-//draw a
-drawPoly(6,48);
-drawPoly(6,49);
-drawPoly(6,50);
-drawPoly(6,52);
-drawPoly(5,48);
-drawPoly(5,49);
-drawPoly(5,51);
-drawPoly(5,52);
-drawPoly(4,49);
-drawPoly(4,50);
-drawPoly(4,51);
+  //draw a
+  drawPoly(6,48);
+  drawPoly(6,49);
+  drawPoly(6,50);
+  drawPoly(6,52);
+  drawPoly(5,48);
+  drawPoly(5,49);
+  drawPoly(5,51);
+  drawPoly(5,52);
+  drawPoly(4,49);
+  drawPoly(4,50);
+  drawPoly(4,51);
 
-//draw r
-drawPoly(6,55);
-drawPoly(6,56);
-drawPoly(5,56);
-drawPoly(5,57);
-drawPoly(4,57);
-drawPoly(4,58);
-drawPoly(4,59);
-drawPoly(4,60);
+  //draw r
+  drawPoly(6,55);
+  drawPoly(6,56);
+  drawPoly(5,56);
+  drawPoly(5,57);
+  drawPoly(4,57);
+  drawPoly(4,58);
+  drawPoly(4,59);
+  drawPoly(4,60);
 
-//draw x
-drawPoly(3,63);
-drawPoly(3,64);
-drawPoly(3,66);
-drawPoly(3,67);
-drawPoly(4,64);
-drawPoly(4,65);
-drawPoly(4,66);
-drawPoly(5,64);
-drawPoly(5,65);
-drawPoly(5,66);
-drawPoly(6,63);
-drawPoly(6,64);
-drawPoly(6,66);
-drawPoly(6,67);
-
+  //draw x
+  drawPoly(3,63);
+  drawPoly(3,64);
+  drawPoly(3,66);
+  drawPoly(3,67);
+  drawPoly(4,64);
+  drawPoly(4,65);
+  drawPoly(4,66);
+  drawPoly(5,64);
+  drawPoly(5,65);
+  drawPoly(5,66);
+  drawPoly(6,63);
+  drawPoly(6,64);
+  drawPoly(6,66);
+  drawPoly(6,67);
 }
 
 function drawPoly(row, column) {
