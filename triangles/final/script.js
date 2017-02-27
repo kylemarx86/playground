@@ -1,10 +1,7 @@
 $(document).ready(function(){
    drawTriangles();
-   scaleDown();
 });
-function scaleDown(){
-  $('#main').attr('transform', "scale(0.125)");
-}
+
 function drawTriangles(){
   //draw k
   drawPoly(1,6);
@@ -139,6 +136,13 @@ function drawTriangles(){
   drawPoly(6,64);
   drawPoly(6,66);
   drawPoly(6,67);
+
+  //scale the name drawn
+  scaleDown();
+}
+
+function scaleDown(){
+  $('#main').attr('transform', "scale(0.125)");
 }
 
 function drawPoly(row, column) {
