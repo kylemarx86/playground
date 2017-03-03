@@ -21,6 +21,50 @@ pattern polygon{
 }
 
 .name{
-    fill: red;
-    stroke: black;
+    /*fill: red;*/
+    /*stroke: black;*/
 }
+#fancy_name{
+    height: 8vh;
+}
+
+
+.name {
+        /*width:100px;*/
+        /*height:20px;*/
+        fill:red;
+        stroke: black;
+        animation:myfirst 5s;
+      -moz-animation:myfirst 5s infinite; /* Firefox */
+    -webkit-animation:myfirst 5s infinite; /* Safari and Chrome */
+      }
+
+
+      @-moz-keyframes myfirst /* Firefox */
+    {
+        /*0%   {fill:red; transform: rotateY(0);}
+        25%   {fill:darkred; transform: rotateY(90deg);}
+        50%   {fill:darkorange; transform: rotateY(180deg);}
+        75%  {fill:orange; transform: rotateY(270deg);}
+        100%   {fill:red; transform: rotateY(360deg);}*/
+
+            0%   {fill:red;}
+            25%   {fill:darkred;}
+            50%   {fill:darkorange;}
+            75%  {fill:orange;}
+            100%   {fill:red;}
+    }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        /*0%   {fill:red; transform: rotateY(0);}
+    25%   {fill:darkred; transform: rotateY(90deg);}
+    50%   {fill:darkorange; transform: rotateY(180deg);}
+    75%  {fill:orange; transform: rotateY(270deg);}
+    100%   {fill:red; transform: rotateY(360deg);}*/
+    0%   {fill:red;}
+    25%   {fill:darkred;}
+    50%   {fill:darkorange;}
+    75%  {fill:orange;}
+    100%   {fill:red;}
+    }
