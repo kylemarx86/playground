@@ -1,0 +1,71 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    font-size: 5em;
+}
+
+/*exact*/
+/*@media screen and (max-width: 1024px) and (max-height: 1366px){
+    #main::after{
+        content: 'iPad Pro';
+        background-color: yellow;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1743px){
+    #main::after{
+        content: 'iPhone 6';
+        background-color: green;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1742px){
+    #main::after{
+        content: 'iPhone 6 Plus, Galaxy S5, and Nexus 6P';
+        background-color: red;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1739px){
+    #main::after{
+        content: 'iPhone 5';
+        background-color: blue;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1569px){
+    #main::after{
+        content: 'Nexus 5X';
+        background-color: teal;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1306px){
+        #main::after{
+        content: 'iPad';
+        background-color: orange;
+    }
+}*/
+
+/*grouped*/
+@media screen and (max-width: 1024px) and (max-height: 1366px){
+    #main::after{
+        content: 'iPad Pro';
+        background-color: yellow;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1743px){
+    #main::after{
+        content: 'iPhone 6,     iPhone 6 Plus, Galaxy S5, and Nexus 6P,  iPhone 5';
+        background-color: green;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1569px){
+    #main::after{
+        content: 'Nexus 5X';
+        background-color: teal;
+    }
+}
+@media screen and (max-width: 980px) and (max-height: 1306px){
+        #main::after{
+        content: 'iPad';
+        background-color: orange;
+    }
+}
