@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  background-color: darkslategray;
+}
+
+.red{
+  color: red;
+}
+.neon{
+  font-family: 'Press Start 2P', cursive;
+}
+
+#main{
+  -webkit-text-stroke: 1px red;
+  color: white;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+#sub{
+    color: #fff;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+/*OLD FF1177*/
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF0000, 0 0 70px #FF0000, 0 0 80px #FF0000, 0 0 100px #FF0000, 0 0 150px #FF0000;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF0000, 0 0 35px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000, 0 0 75px #FF0000;
+  }
+}
