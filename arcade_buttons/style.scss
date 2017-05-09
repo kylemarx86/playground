@@ -1,6 +1,4 @@
 $bg: #333;
-// $red-color: red;
-// $blue-color: blue;
 
 $btn_size: 100px;
 
@@ -18,14 +16,20 @@ footer{
   bottom: 0;
   left: 0;
 }
-.btn_container{
+.control_panel{
     display: inline-block;
     position: relative;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-
+.btn_container{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    height: 100%;
+}
 .arcade_btn {
     position: relative;
     display: inline-block;
@@ -70,9 +74,6 @@ footer{
         inset 0 0 $btn_size/10 $btn_size/6 darken($base-color, 10%),
         0 $btn_size/20 0 rgba(0, 0, 0, .3);
     }
-
-    // background-color: $base-color;
-    
 
   &:after {
     content: '';
@@ -124,11 +125,43 @@ footer{
     background-color: darken($base-color, 2%);
     }
     
-    
-        
     &:after {
       bottom: $btn_size/20 + $btn_size/15;
       border-width: 0;
     }
+  }
+}
+.label_container{
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 86px;
+  margin: 0 10px;
+}
+
+.label{
+  position: absolute;
+  display: inline-block;
+  padding: 3px 10px;
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: white;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+  &.red{
+    background-color: red;
+  }
+  &.blue{
+    background-color: blue;
+  }
+  span{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px black;
+    color: white;
+      text-shadow:
+        1px 1px 0 #000;
   }
 }
