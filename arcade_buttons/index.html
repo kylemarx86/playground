@@ -10,27 +10,40 @@
 <body>
     <div class='main_screen background'>
         <div class='screen'>
-            here is some text to fill in the gaps while i test things out
-            <p>more filler text</p>
-            <p>lorem ipsem stuff</p>
+            <div class='first grown'>
+                here is some text to fill in the gaps while i test things out
+                <p>more filler text</p>
+                <p>lorem ipsem stuff</p>
+            </div>
+            <div class='second shrunk hidden'>
+                here is some text to fill in the gaps while i test things out
+                <p>more filler text</p>
+                <p>lorem ipsem stuff</p>
+            </div>
+            <div class='third shrunk hidden'>
+                here is some text to fill in the gaps while i test things out
+                <p>more filler text</p>
+                <p>lorem ipsem stuff</p>
+            </div>
+            
         </div>
     </div>
     <footer>
         <div class='control_panel'>
             <div class='label_container'>
                 <div class='label red'>
-                    <span>Next</span>
+                    <span>Prev</span>
                 </div>
             </div>
             <div class='btn_container'>
-                <div class='arcade_btn red'></div>
+                <div class='arcade_btn red' id='prev'></div>
             </div>
             <div class='btn_container'>
-                <div class='arcade_btn blue'></div>
+                <div class='arcade_btn blue' id='next'></div>
             </div>
             <div class='label_container'>
                 <div class='label blue'>
-                    <span>Prev</span>
+                    <span>Next</span>
                 </div>        
             </div>
         </div>
