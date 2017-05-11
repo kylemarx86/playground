@@ -9,16 +9,22 @@ body {
 
 .main_screen {
   display: inline-block;
-  width: 90%;
-  height: 60%; }
+  width: 100%;
+  height: 60%;
+  position: relative;
+  top: 20%; }
   .main_screen .screen {
-    width: 100%;
+    width: 90%;
     height: 100%;
     background: #101010;
     color: white;
     border-radius: 15px;
     padding: 20px;
-    display: inline-block; }
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 .first {
   background-color: green; }
