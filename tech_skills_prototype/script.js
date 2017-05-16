@@ -13,12 +13,9 @@ function toggleSelected(tech){
     // console.log('this: ',tech);
     $('.tech').click(function(){
         console.log('clicked');
-        // $('.tech').length;
-        console.log('count tech elements', $('.tech').length);
-        var $elt_num = $(this).parent().parent().parent().find(this).index();
-        console.log('parent: ', $(this).parent());
-        console.log('parent of parent: ', $(this).parent().parent());
-        // console.log('elt num: ', $elt_num);
+        // console.log('count tech elements', $('.tech').length);
+        var $elt_index = $(this).parent().find(this).index();
+        console.log('elt num: ', $elt_index);
         $('.tech').removeClass('selected');
         $(this).toggleClass('selected');
     });

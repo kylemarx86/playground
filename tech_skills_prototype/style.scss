@@ -44,7 +44,7 @@
   margin: 5em auto 0;
   border: dotted 5px orange;
   .tech{
-    position: relative;
+    // position: relative;
     height: 100px;
     width: 100px;
     border-radius: 10%;      
@@ -53,7 +53,10 @@
     &.selected{
         transition-duration: 2.5s;
         background-color: yellow;
-        transform: translateX(75%) scale(1.25);
+        transform: translateX(250%) scale(1.25);
+        img{
+            filter: grayscale(0);
+        }
     }
     &:not(.selected){
         transition-duration: 0.5s;
@@ -67,12 +70,10 @@
     max-width: 90%; 
     max-height: 90%;
     filter: grayscale(100%);
-    // border: solid 5px tomato;
     transition: .15s;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     
     &:hover,
     &:active {
