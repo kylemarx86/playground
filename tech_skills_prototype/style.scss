@@ -22,7 +22,8 @@
     margin: -($item-size / 2);
   
     $angle: (360 / $item-count);
-    $rot: 0;
+    // $rot: 0;
+    $rot: 360;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
