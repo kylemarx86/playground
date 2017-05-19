@@ -12,7 +12,7 @@
   border-radius: 50%; 
   list-style: none;       
   
-  > * {
+  .tech {
     display: block;
     position: absolute;
     top:  50%; 
@@ -22,8 +22,8 @@
     margin: -($item-size / 2);
   
     $angle: (360 / $item-count);
-    // $rot: 0;
-    $rot: 360;
+    $rot: 0;
+    // $rot: 360;
 
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
