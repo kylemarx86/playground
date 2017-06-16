@@ -3,7 +3,7 @@
   position: relative;
   display: inline-block;
   height: 100px;
-  width: 75px;
+  width: 80px;
   background-color: orange; }
   .letter .inset {
     position: absolute;
@@ -40,5 +40,27 @@
     height: 100%;
     left: 7px;
     background-color: red; }
+  .letter.y .y1 {
+    border-bottom: 40px solid black;
+    border-right: 40px solid transparent;
+    bottom: 0;
+    left: 0; }
+  .letter.y .y2 {
+    border-bottom: 40px solid black;
+    border-left: 40px solid transparent;
+    bottom: 0;
+    right: 0; }
+  .letter.y .y3 {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 50px solid red;
+    left: 50%;
+    transform: translateX(-50%); }
+  .letter.y .y4 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 25px solid black;
+    left: 50%;
+    transform: translateX(-50%); }
 
 /*# sourceMappingURL=style.css.map */
