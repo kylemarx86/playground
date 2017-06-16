@@ -1,0 +1,39 @@
+.letter{
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  width: 75px;
+  background-color: orange;
+    
+}
+.inset{
+  position: absolute;
+}
+.k1{
+  height: 0;
+  width: 0;
+  border-top: 50px solid black;
+  border-right: 50px solid transparent;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.k2{
+  height: 0;
+  width: 0;
+  border-bottom: 50px solid black;
+  border-right: 50px solid transparent;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.k3{
+  height: 0;
+  width: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid black;
+  right: 0;
+}
