@@ -12,6 +12,7 @@
   }
   //for the letter k
   &.k{
+    // upper triangle
     .k1{
       border-top: 50px solid black;
       border-right: 50px solid transparent;
@@ -19,6 +20,7 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    // lower triangle
     .k2{
       border-bottom: 50px solid black;
       border-right: 50px solid transparent;
@@ -26,6 +28,7 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    // triangle on right that forms right side of k
     .k3{
       border-top: 50px solid transparent;
       border-bottom: 50px solid transparent;
@@ -33,6 +36,7 @@
       border-right: 50px solid red;
       right: 0;
     }
+    // triangle on right
     .k4{
       border-top: 40px solid transparent;
       border-bottom: 40px solid transparent;
@@ -42,6 +46,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
+    // rectangle that forms right side of left stroke
     .k5{
       width: 6px;
       height: 100%;
@@ -51,6 +56,11 @@
   }
   //for the letter y
   &.y{
-
+    .y1{
+      
+    }
+    .y2{
+      
+    }
   }
 }
