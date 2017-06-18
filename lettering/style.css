@@ -4,7 +4,8 @@
   display: inline-block;
   height: 100px;
   width: 80px;
-  background-color: orange; }
+  background-color: orange;
+  overflow: none; }
   .letter .inset {
     position: absolute;
     height: 0;
@@ -13,14 +14,12 @@
     border-top: 50px solid black;
     border-right: 50px solid transparent;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%); }
+    left: 20px; }
   .letter.k .k2 {
     border-bottom: 50px solid black;
     border-right: 50px solid transparent;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); }
+    left: 20px; }
   .letter.k .k3 {
     border-top: 50px solid transparent;
     border-bottom: 50px solid transparent;
@@ -36,31 +35,105 @@
     top: 50%;
     transform: translateY(-50%); }
   .letter.k .k5 {
-    width: 6px;
+    width: 10px;
     height: 100%;
-    left: 7px;
+    left: 10px;
     background-color: red; }
   .letter.y .y1 {
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: red; }
+  .letter.y .y2 {
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: red; }
+  .letter.y .ya {
+    width: 40px;
+    height: 60px;
+    background-color: black;
+    left: 20px; }
+  .letter.y .yb {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid red;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  .letter.y .yc {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid red;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .letter.y .yd {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid orange;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .letter.y .y3 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .letter.y .y4 {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid orange;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -10px); }
+  .letter.y .y5 {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid black;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -20px); }
+  .letter.y .y6 {
     border-bottom: 40px solid black;
     border-right: 40px solid transparent;
     bottom: 0;
     left: 0; }
-  .letter.y .y2 {
+  .letter.y .y7 {
     border-bottom: 40px solid black;
     border-left: 40px solid transparent;
     bottom: 0;
     right: 0; }
-  .letter.y .y3 {
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 50px solid red;
-    left: 50%;
-    transform: translateX(-50%); }
-  .letter.y .y4 {
-    border-left: 20px solid transparent;
+  .letter.y .yw {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid black;
+    border-right: 30px solid transparent;
+    top: 20px; }
+  .letter.y .yz {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid black;
     border-right: 20px solid transparent;
-    border-top: 25px solid black;
-    left: 50%;
-    transform: translateX(-50%); }
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+  .letter.l .l1 {
+    height: 100%;
+    width: 30px;
+    background-color: black;
+    left: 0; }
+  .letter.l .l2 {
+    height: 100%;
+    width: 40px;
+    background-color: red;
+    right: 0; }
+  .letter.l .l3 {
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    right: 0; }
 
 /*# sourceMappingURL=style.css.map */

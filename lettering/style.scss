@@ -6,6 +6,7 @@
   // width: 75px;
   width: 80px;
   background-color: orange;
+  overflow: none;
   .inset{
     position: absolute;
     height: 0;
@@ -18,16 +19,16 @@
       border-top: 50px solid black;
       border-right: 50px solid transparent;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 20px;
+      // transform: translateX(-50%);
     }
     // lower triangle
     .k2{
       border-bottom: 50px solid black;
       border-right: 50px solid transparent;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 20px;
+      // transform: translateX(-50%);
     }
     // triangle on right that forms right side of k
     .k3{
@@ -49,46 +50,144 @@
     }
     // rectangle that forms right side of left stroke
     .k5{
-      width: 6px;
+      width: 10px;
       height: 100%;
-      left: 7px;
+      left: 10px;
       background-color: red;
     }
   }
   // for the letter y
   &.y{
-    // lower left triangle
     .y1{
+      left: 0;
+      width: 10px;
+      height: 100%;
+      background-color: red;
+    }
+    .y2{
+      right: 0;
+      width: 10px;
+      height: 100%;
+      background-color: red;
+    }
+    .ya{
+      width: 40px;
+      height: 60px;
+      background-color: black;
+      left: 20px;
+    }
+    .yb{
+      	border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid red;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .yc{
+      	border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid red;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .yd{
+      	border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid orange;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .y3{
+      	border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid black;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .y4{
+      	border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid orange;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -10px);
+    }
+    .y5{
+      	border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid black;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -20px);
+    }
+    
+    
+    // lower left triangle
+    .y6{
       border-bottom: 40px solid black;
       border-right: 40px solid transparent;
       bottom: 0;
       left: 0;
     }
     // lower right triangle
-    .y2{
+    .y7{
       border-bottom: 40px solid black;
       border-left: 40px solid transparent;
       bottom: 0;
       right: 0;
     }
-    .y3{
-      	border-left: 40px solid transparent;
-        border-right: 40px solid transparent;
-        border-top: 50px solid red;
-        left: 50%;
-        transform: translateX(-50%);
+    .yw{
+      // border-top: 20px solid transparent;
+      // border-bottom: 20px solid transparent;
+      // border-left: 20px solid black;
+      // border-right: 20px solid transparent;
+      // top: 20px;
+
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 30px solid black;
+      border-right: 30px solid transparent;
+      // left: 0;
+      top: 20px;
+
+
     }
-    .y4{
-      	border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-top: 25px solid black;
-        left: 50%;
-        transform: translateX(-50%);
+    // left black triangle
+    .yz{
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid black;
+      border-right: 20px solid transparent;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
+    
   }
   // for the letter l
   &.l{
-
+    .l1{
+      height: 100%;
+      width: 30px;
+      background-color: black;
+      left: 0;
+    }
+    .l2{
+      height: 100%;
+      width: 40px;
+      background-color: red;
+      right: 0;
+    }
+    .l3{
+      height: 100px;
+      width: 30px;
+      background-color: black;
+      right: 0;
+    }
   }
   // for the letter e
   &.e{
