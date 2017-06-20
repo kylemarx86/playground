@@ -141,34 +141,17 @@
       bottom: 0;
       right: 0;
     }
+    // left black triangle
     .yw{
-      // border-top: 20px solid transparent;
-      // border-bottom: 20px solid transparent;
-      // border-left: 20px solid black;
-      // border-right: 20px solid transparent;
-      // top: 20px;
-
       border-top: 30px solid transparent;
       border-bottom: 30px solid transparent;
       border-left: 30px solid black;
       border-right: 30px solid transparent;
-      // left: 0;
       top: 20px;
-
-
     }
-    // left black triangle
-    .yz{
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 20px solid black;
-      border-right: 20px solid transparent;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    
   }
+
+
   // for the letter l
   &.l{
     .l1{
@@ -192,7 +175,81 @@
   }
   // for the letter e
   &.e{
-
+    // height: 80px;
+    background-color: red;
+    //upper-right black triangle
+    .e1{
+      border-top: 40px solid black;
+      border-right: 40px solid transparent;
+    }
+    //upper-right black triangle
+    .e2{
+      border-top: 40px solid black;
+      border-left: 40px solid transparent;
+      right: 0;
+    }
+    //lower-left black triangle
+    .e3{
+      border-bottom: 40px solid black;
+      border-right: 40px solid transparent;
+      bottom: 0;
+    }
+    //lower-right black triangle
+    .e4{
+      border-bottom: 40px solid black;
+      border-left: 40px solid transparent;
+      bottom: 0;
+      right: 0;
+    }
+    // yellow triangle - middle of e
+    .e5{
+      border-top: 30px solid orange;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    // black triangle - middle of e
+    .e6{
+      border-top: 20px solid black;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .e7{
+      border-bottom: 30px solid orange;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .e8{
+      border-bottom: 20px solid black;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .e9{
+      background-color: black;
+      height: 10px;
+      width: 70px;
+      right: 0;
+      top: 50px;
+    }
+    .e10{
+      background-color: orange;
+      width: 10px;
+      height: 10px;
+      left: 10px;
+      top: 50px;
+    }
+    
   }
   // for the letter m
   &.m{
@@ -212,4 +269,3 @@
   }
 
 }
-

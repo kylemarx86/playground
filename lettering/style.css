@@ -114,14 +114,6 @@
       border-left: 30px solid black;
       border-right: 30px solid transparent;
       top: 20px; }
-    .letter.y .yz {
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 20px solid black;
-      border-right: 20px solid transparent;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%); }
   .letter.l .l1 {
     height: 100%;
     width: 30px;
@@ -137,5 +129,63 @@
     width: 30px;
     background-color: black;
     right: 0; }
+  .letter.e {
+    background-color: red; }
+    .letter.e .e1 {
+      border-top: 40px solid black;
+      border-right: 40px solid transparent; }
+    .letter.e .e2 {
+      border-top: 40px solid black;
+      border-left: 40px solid transparent;
+      right: 0; }
+    .letter.e .e3 {
+      border-bottom: 40px solid black;
+      border-right: 40px solid transparent;
+      bottom: 0; }
+    .letter.e .e4 {
+      border-bottom: 40px solid black;
+      border-left: 40px solid transparent;
+      bottom: 0;
+      right: 0; }
+    .letter.e .e5 {
+      border-top: 30px solid orange;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .letter.e .e6 {
+      border-top: 20px solid black;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .letter.e .e7 {
+      border-bottom: 30px solid orange;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .letter.e .e8 {
+      border-bottom: 20px solid black;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .letter.e .e9 {
+      background-color: black;
+      height: 10px;
+      width: 70px;
+      right: 0;
+      top: 50px; }
+    .letter.e .e10 {
+      background-color: orange;
+      width: 10px;
+      height: 10px;
+      left: 10px;
+      top: 50px; }
 
 /*# sourceMappingURL=style.css.map */
