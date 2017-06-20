@@ -6,7 +6,7 @@
   // width: 75px;
   width: 80px;
   background-color: orange;
-  overflow: none;
+  overflow: hidden;
   .inset{
     position: absolute;
     height: 0;
@@ -58,6 +58,7 @@
   }
   // for the letter y
   &.y{
+    transform: translateY(50%);
     .y1{
       left: 0;
       width: 10px;
