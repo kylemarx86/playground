@@ -1,0 +1,122 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  background: blue;
+  margin: 0;
+  padding: 0;
+}
+.middle_section{
+  position: relative;
+  background: rgba(0,0,0,1);
+  width: 100%;
+  height: 30%;
+}
+.apps_carousel{
+  position: relative;
+  display: inline-block;
+  
+  height: 100%;
+  width: 100%;
+  
+  overflow: hidden;
+}
+.image_container{
+  position: absolute;
+  display: inline-block;
+
+  width: auto;
+  height: 100%;
+
+  background: lime;
+  left: 10%;
+  float: left;
+  
+}
+
+img{
+  position: relative;
+  /* position: absolute; */
+  
+  display: inline-block;
+  
+  width: auto;
+  height: 100%;
+  
+  left: 0;
+  z-index: 1;
+}
+.gray{
+  filter: grayscale(0.5);
+}
+.image_container.gray{
+
+  float: left;
+}
+.image_container.gray img{
+  left: 100%;
+}
+
+.button{
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  /* padding-left: 10%; */
+  background: green;
+  z-index: 2;
+  
+}
+.prev{
+  left: 0;
+  transform: skew(-5deg) translateX(-50%);
+  
+}
+.next{
+  right: 0;
+  transform: skew(-5deg) translateX(50%);
+}
+
+
+.nav_bar{
+  position: absolute;
+  background: black;
+  width: 100%;
+  width: 95%;
+  height: 10%;
+  bottom: 0;
+  z-index: 1;
+  padding-left: 5%
+}
+.nav_num{
+  position: relative;
+  display: inline-block;
+  height: 75%;
+  height: 100%;
+  width: 5%;
+  margin: 0 5px;
+  /* top: 25%; */
+  top: 0;
+  -webkit-transform: skewX(-5deg);
+  transform: skewX(-5deg);
+  color: black;
+  background-color: white;
+  box-shadow: -3px -3px 2px 1px #D0D0D0 inset;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.25em;
+}
+.gradient{
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  position: absolute;
+  
+  height: 100%;
+  width: 100%;
+  
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.9)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.9)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.9)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.9)); /* Standard syntax */
+}
