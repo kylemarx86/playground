@@ -29,11 +29,18 @@ html, body {
 
 img {
   position: relative;
-  /* position: absolute; */
   display: inline-block;
   width: auto;
   height: 100%;
   left: 0;
+  z-index: 1; }
+
+img.spacer {
+  position: relative;
+  z-index: -1; }
+
+img.real {
+  position: absolute;
   z-index: 1; }
 
 .gray {
