@@ -1,0 +1,53 @@
+$phase_shift: 2;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #242424;
+}
+.container{
+  width: 100%;
+  height: 50%;
+  display: inline-block;
+  position: relative;
+}
+.column{
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 10px;
+  animation: upDown 2.5s alternate infinite ease-in-out;
+}
+.blob{
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: darkorange;
+  position: absolute;
+  
+}
+.blob:nth-of-type(1){
+  /* top: 10% */
+  background: blue;
+}
+
+// @keyframes noise-anim{
+//   $steps:20;
+//   @for $i from 0 through $steps{
+//     #{percentage($i*(1/$steps))}{
+//       clip:rect(random(100)+px,9999px,random(100)+px,0);
+//     }
+//   }
+// }
+
+@keyframes upDown{
+  to { 
+    /* bottom: 0; */
+    transform: translateY(100%);
+  }
+}
