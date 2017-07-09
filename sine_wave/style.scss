@@ -21,9 +21,7 @@ body {
   position: relative;
   display: inline-block;
   height: 100%;
-  // width: 10px;
   
-  // animation: upDown 2.5s alternate infinite ease-in-out;
 }
 .blob{
   display: inline-block;
@@ -32,12 +30,10 @@ body {
   background: darkorange;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-//   animation: upDown 2.5s alternate infinite ease-in-out;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.column:nth-of-type(odd) .blob {
-  background: red;
-}
+
 
 @mixin sine-setup($elt-count) {
     .column{
@@ -46,7 +42,7 @@ body {
             width: 100% / $elt-count;
             animation: upDown 1.25s #{$i*0.1}s ease-in-out alternate infinite;
             .blob{
-              animation: spin 1.25s #{$i*0.1}s ease-in infinite;
+              animation: spin 1.25s #{$i*0.1}s ease-in-out alternate infinite;
             }
           }
         }
@@ -54,11 +50,23 @@ body {
 }
 
 @include sine-setup(20);
-
+@keyframes colorChange{
+  from{
+    background: red;
+  }
+  to{
+    background: darkorange;
+  }
+}
 
 @keyframes spin{
+  0%{
+    transform: translate(-50%, -50%);
+    background: red;
+  }
   100%{
-    transform: translateY(-50%) rotateZ(180deg);
+    transform: translate(-50%, -50%) rotateZ(180deg);
+    background: darkorange;
   }
 }
 
