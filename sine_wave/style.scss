@@ -39,25 +39,17 @@ body {
     .column{
         @for $i from 0 through $elt-count{
           &:nth-of-type(#{$i}) {
-            width: 100% / $elt-count;
+            width: floor(100% / $elt-count);
             animation: upDown 1.25s #{$i*0.1}s ease-in-out alternate infinite;
             .blob{
-              animation: spin 1.25s #{$i*0.1}s ease-in-out alternate infinite;
+              animation: spin 2.5s #{$i*0.1}s ease-in-out alternate infinite;
             }
           }
         }
     }
 }
 
-@include sine-setup(20);
-@keyframes colorChange{
-  from{
-    background: red;
-  }
-  to{
-    background: darkorange;
-  }
-}
+@include sine-setup(21);
 
 @keyframes spin{
   0%{
