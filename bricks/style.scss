@@ -1,0 +1,48 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.block-container{
+    line-height: 0;
+    height: 100%;
+    .block{
+        position: relative;
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        // margin: 0;
+        background: red;
+        float: left;
+
+        .brick-row{
+            position: relative;
+            display: inline-block;
+            height: 25%;
+            width: 100%;
+            box-sizing: border-box;
+            border-collapse: collapse;
+            &:nth-of-type(even){
+                .brick{
+                    &:nth-of-type(1), 
+                    &:nth-of-type(3){
+                        width: 25%;
+                    }
+                    &:nth-of-type(2){
+                        width: 50%;
+                    }
+                }
+            }
+            .brick{
+                position: relative;
+                display: inline-block;
+                height: 100%;
+                border: solid black 2px;
+                box-sizing: border-box;
+                border-collapse: collapse;
+                width: 50%;
+            }
+        }
+    }
+}
