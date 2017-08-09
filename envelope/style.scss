@@ -29,8 +29,9 @@ body{
     }
     .top_container{
         perspective: 1000px;
-        position: relative;
-        top: $env-ht;
+        position: absolute;
+        bottom: 2 * $env-ht;
+        // top: $env-ht;
         width: 100%;
         height: $env-ht;
         z-index: 1;
