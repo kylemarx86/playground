@@ -9,7 +9,8 @@ $(document).ready(function(){
 
 function send_mail(){
     // $('.top').addClass('closed');
-    $('.top').toggleClass('closed');
+    $('.note').toggleClass('moved');
+    $('.top_container, .top').toggleClass('closed');
     // $('.inside, .outside').toggleClass('invisible');
     
     // $('.top .inside, .top .outside').toggleClass('invisible');
