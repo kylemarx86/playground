@@ -10,7 +10,7 @@ $(document).ready(function(){
 function send_mail(){
     // $('.top').addClass('closed');
     $('.top').toggleClass('closed');
-    $('.inside, .outside').toggleClass('invisible');
+    // $('.inside, .outside').toggleClass('invisible');
     
     // $('.top .inside, .top .outside').toggleClass('invisible');
     
