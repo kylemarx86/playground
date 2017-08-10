@@ -1,0 +1,66 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+body {
+  background-color: #333; }
+
+.fold-it {
+  display: block;
+  bottom: 0;
+  position: absolute; }
+
+.note {
+  perspective: 1000px;
+  position: relative;
+  display: inline-block;
+  height: 300px;
+  width: 150px;
+  background: transparent; }
+  .note .piece {
+    position: relative;
+    display: inline-block;
+    color: black;
+    height: 33.33333%;
+    width: 100%;
+    background: transparent;
+    transform-style: preserve-3d;
+    transition-duration: 0.75s; }
+    .note .piece:nth-of-type(2) {
+      background: white; }
+  .note .bottom_container {
+    perspective: 1000px;
+    position: absolute;
+    bottom: 0;
+    z-index: 0; }
+    .note .bottom_container .bottom {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      transform: rotateX(0);
+      transform-origin: top;
+      transform-style: preserve-3d;
+      transition: all 0.5s;
+      transition-delay: 0.5s; }
+      .note .bottom_container .bottom .front, .note .bottom_container .bottom .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: white;
+        left: 0;
+        backface-visibility: hidden;
+        transition: transform 0.3s; }
+      .note .bottom_container .bottom .front {
+        background: yellow;
+        transform: rotateX(0); }
+      .note .bottom_container .bottom .back {
+        transform: rotateX(180deg); }
+      .note .bottom_container .bottom.folded {
+        transition-duration: 0.5s;
+        transform: rotateX(180deg);
+        transform-style: preserve-3d;
+        z-index: 2; }
+
+/*# sourceMappingURL=style.css.map */

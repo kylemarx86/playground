@@ -1,0 +1,91 @@
+$primary-color: #333;
+$piece-ht: 100% / 3;
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body{
+    background-color: $primary-color;
+}
+
+.fold-it{
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+.note{
+    perspective: 1000px;
+    position: relative;
+    display: inline-block;
+    height: 300px;
+    width: 150px;
+    background: transparent;
+
+    .piece{
+        position: relative;
+        display: inline-block;
+        color: black;
+        height: $piece-ht;
+        width: 100%;
+        background: transparent;
+
+        transform-style: preserve-3d;
+        transition-duration: 0.75s;
+
+        &:nth-of-type(2){
+            background: white;
+        }
+    }
+
+    .bottom_container{
+        perspective: 1000px;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+
+        .bottom{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            
+            transform: rotateX(0);
+            transform-origin: top;
+            transform-style: preserve-3d;
+            
+            transition: all 0.5s;
+            transition-delay: 0.5s;     //time it takes note to move
+            
+            .front, .back{
+                
+                position: absolute;
+                
+                height: 100%;
+                width: 100%;
+                background: white;
+                left: 0;
+                backface-visibility: hidden;
+                transition: transform 0.3s;
+            }
+            .front{
+                background: yellow;
+                transform: rotateX(0);
+                // transform: rotateX(0);
+            }
+            .back{
+                transform: rotateX(180deg);
+                // background: yellow;
+                // transform: rotateX(180deg);
+            }
+            &.folded{
+                transition-duration: 0.5s;
+                transform: rotateX(180deg);
+                // transform-origin:  bottom;
+                transform-style: preserve-3d;
+                z-index: 2;
+            } // end closed
+        } // end top
+    }
+}
