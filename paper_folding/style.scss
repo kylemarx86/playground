@@ -24,7 +24,7 @@ body{
     background: transparent;
 
     .piece{
-        position: relative;
+        // position: relative;
         display: inline-block;
         color: black;
         height: $piece-ht;
@@ -36,8 +36,58 @@ body{
 
         &:nth-of-type(2){
             background: white;
+            top: 0;
+            transform: translateY(100%);
         }
     }
+
+    .top_container{
+        perspective: 1000px;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+
+        .top{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            
+            transform: rotateX(0);
+            transform-origin: bottom;
+            transform-style: preserve-3d;
+            
+            transition: all 0.5s;
+            transition-delay: 0.5s;     //time it takes note to move
+            
+            .front, .back{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: white;
+                left: 0;
+                backface-visibility: hidden;
+                transition: transform 0.3s;
+            }
+            .front{
+                background: yellow;
+                transform: rotateX(0);
+            }
+            .back{
+                transform: rotateX(180deg);
+            }
+            &.folded{
+                transition-duration: 0.5s;
+                transform: rotateX(-180deg);
+                transform-style: preserve-3d;
+                z-index: 2;
+            } // end closed
+        } // end top
+    }
+
+
+
+
 
     .bottom_container{
         perspective: 1000px;
@@ -72,17 +122,13 @@ body{
             .front{
                 background: yellow;
                 transform: rotateX(0);
-                // transform: rotateX(0);
             }
             .back{
                 transform: rotateX(180deg);
-                // background: yellow;
-                // transform: rotateX(180deg);
             }
             &.folded{
                 transition-duration: 0.5s;
                 transform: rotateX(180deg);
-                // transform-origin:  bottom;
                 transform-style: preserve-3d;
                 z-index: 2;
             } // end closed

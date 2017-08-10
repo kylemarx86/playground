@@ -19,7 +19,6 @@ body {
   width: 150px;
   background: transparent; }
   .note .piece {
-    position: relative;
     display: inline-block;
     color: black;
     height: 33.33333%;
@@ -28,7 +27,42 @@ body {
     transform-style: preserve-3d;
     transition-duration: 0.75s; }
     .note .piece:nth-of-type(2) {
-      background: white; }
+      background: white;
+      top: 0;
+      transform: translateY(100%); }
+  .note .top_container {
+    perspective: 1000px;
+    position: absolute;
+    top: 0;
+    z-index: 0; }
+    .note .top_container .top {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      transform: rotateX(0);
+      transform-origin: bottom;
+      transform-style: preserve-3d;
+      transition: all 0.5s;
+      transition-delay: 0.5s; }
+      .note .top_container .top .front, .note .top_container .top .back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: white;
+        left: 0;
+        backface-visibility: hidden;
+        transition: transform 0.3s; }
+      .note .top_container .top .front {
+        background: yellow;
+        transform: rotateX(0); }
+      .note .top_container .top .back {
+        transform: rotateX(180deg); }
+      .note .top_container .top.folded {
+        transition-duration: 0.5s;
+        transform: rotateX(-180deg);
+        transform-style: preserve-3d;
+        z-index: 2; }
   .note .bottom_container {
     perspective: 1000px;
     position: absolute;
