@@ -24,8 +24,7 @@ body {
     height: 33.33333%;
     width: 100%;
     background: transparent;
-    transform-style: preserve-3d;
-    transition-duration: 0.75s; }
+    transform-style: preserve-3d; }
     .note .piece:nth-of-type(2) {
       background: white;
       top: 0;
@@ -45,12 +44,12 @@ body {
       height: 100%;
       transform: rotateX(0);
       transform-style: preserve-3d;
-      transition: all 0.5s;
-      transition-delay: 0.5s; }
+      transition: all 0.3s; }
       .note .container .part.bottom {
         transform-origin: top; }
       .note .container .part.top {
-        transform-origin: bottom; }
+        transform-origin: bottom;
+        transition-delay: 0.3s; }
       .note .container .part .front, .note .container .part .back {
         position: absolute;
         height: 100%;
@@ -65,7 +64,7 @@ body {
       .note .container .part .back {
         transform: rotateX(180deg); }
       .note .container .part.folded {
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
         transform-style: preserve-3d;
         z-index: 2; }
         .note .container .part.folded.bottom {
