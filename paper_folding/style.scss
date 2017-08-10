@@ -24,7 +24,6 @@ body{
     background: transparent;
 
     .piece{
-        // position: relative;
         display: inline-block;
         color: black;
         height: $piece-ht;
@@ -41,25 +40,34 @@ body{
         }
     }
 
-    .top_container{
+    .container{
         perspective: 1000px;
         position: absolute;
-        top: 0;
         z-index: 0;
+        &.bottom{
+            bottom: 0
+        }
+        &.top{
+            top: 0;
+        }
 
-        .top{
+        .part{
             position: relative;
             display: inline-block;
             width: 100%;
             height: 100%;
             
             transform: rotateX(0);
-            transform-origin: bottom;
             transform-style: preserve-3d;
             
             transition: all 0.5s;
             transition-delay: 0.5s;     //time it takes note to move
-            
+            &.bottom{
+                transform-origin: top;
+            }
+            &.top{
+                transform-origin: bottom;
+            }
             .front, .back{
                 position: absolute;
                 height: 100%;
@@ -78,60 +86,16 @@ body{
             }
             &.folded{
                 transition-duration: 0.5s;
-                transform: rotateX(-180deg);
                 transform-style: preserve-3d;
-                z-index: 2;
-            } // end closed
-        } // end top
+                z-index: 2;     //not sure how necessary
+                &.bottom{
+                    transform: rotateX(180deg);
+                }
+                &.top{
+                    transform: rotateX(-180deg);
+                }
+            } // end folded
+        } // end part
     }
 
-
-
-
-
-    .bottom_container{
-        perspective: 1000px;
-        position: absolute;
-        bottom: 0;
-        z-index: 0;
-
-        .bottom{
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            
-            transform: rotateX(0);
-            transform-origin: top;
-            transform-style: preserve-3d;
-            
-            transition: all 0.5s;
-            transition-delay: 0.5s;     //time it takes note to move
-            
-            .front, .back{
-                
-                position: absolute;
-                
-                height: 100%;
-                width: 100%;
-                background: white;
-                left: 0;
-                backface-visibility: hidden;
-                transition: transform 0.3s;
-            }
-            .front{
-                background: yellow;
-                transform: rotateX(0);
-            }
-            .back{
-                transform: rotateX(180deg);
-            }
-            &.folded{
-                transition-duration: 0.5s;
-                transform: rotateX(180deg);
-                transform-style: preserve-3d;
-                z-index: 2;
-            } // end closed
-        } // end top
-    }
 }

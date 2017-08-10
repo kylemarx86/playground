@@ -30,22 +30,28 @@ body {
       background: white;
       top: 0;
       transform: translateY(100%); }
-  .note .top_container {
+  .note .container {
     perspective: 1000px;
     position: absolute;
-    top: 0;
     z-index: 0; }
-    .note .top_container .top {
+    .note .container.bottom {
+      bottom: 0; }
+    .note .container.top {
+      top: 0; }
+    .note .container .part {
       position: relative;
       display: inline-block;
       width: 100%;
       height: 100%;
       transform: rotateX(0);
-      transform-origin: bottom;
       transform-style: preserve-3d;
       transition: all 0.5s;
       transition-delay: 0.5s; }
-      .note .top_container .top .front, .note .top_container .top .back {
+      .note .container .part.bottom {
+        transform-origin: top; }
+      .note .container .part.top {
+        transform-origin: bottom; }
+      .note .container .part .front, .note .container .part .back {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -53,48 +59,18 @@ body {
         left: 0;
         backface-visibility: hidden;
         transition: transform 0.3s; }
-      .note .top_container .top .front {
+      .note .container .part .front {
         background: yellow;
         transform: rotateX(0); }
-      .note .top_container .top .back {
+      .note .container .part .back {
         transform: rotateX(180deg); }
-      .note .top_container .top.folded {
+      .note .container .part.folded {
         transition-duration: 0.5s;
-        transform: rotateX(-180deg);
         transform-style: preserve-3d;
         z-index: 2; }
-  .note .bottom_container {
-    perspective: 1000px;
-    position: absolute;
-    bottom: 0;
-    z-index: 0; }
-    .note .bottom_container .bottom {
-      position: relative;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      transform: rotateX(0);
-      transform-origin: top;
-      transform-style: preserve-3d;
-      transition: all 0.5s;
-      transition-delay: 0.5s; }
-      .note .bottom_container .bottom .front, .note .bottom_container .bottom .back {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: white;
-        left: 0;
-        backface-visibility: hidden;
-        transition: transform 0.3s; }
-      .note .bottom_container .bottom .front {
-        background: yellow;
-        transform: rotateX(0); }
-      .note .bottom_container .bottom .back {
-        transform: rotateX(180deg); }
-      .note .bottom_container .bottom.folded {
-        transition-duration: 0.5s;
-        transform: rotateX(180deg);
-        transform-style: preserve-3d;
-        z-index: 2; }
+        .note .container .part.folded.bottom {
+          transform: rotateX(180deg); }
+        .note .container .part.folded.top {
+          transform: rotateX(-180deg); }
 
 /*# sourceMappingURL=style.css.map */
