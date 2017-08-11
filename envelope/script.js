@@ -8,11 +8,10 @@ $(document).ready(function(){
 
 
 function send_mail(){
-    // $('.top').addClass('closed');
-    $('.note').toggleClass('moved');
+    // $('.note').toggleClass('moved');
     $('.top_container, .top').toggleClass('closed');
-    // $('.inside, .outside').toggleClass('invisible');
-    
-    // $('.top .inside, .top .outside').toggleClass('invisible');
-    
+
+    $('.top_container, .top').toggleClass('folded');
+    $('.bottom_container, .bottom').toggleClass('folded');
+    $('.note').toggleClass('moved');
 }
