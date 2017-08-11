@@ -10,7 +10,7 @@ body {
   position: relative;
   display: block;
   width: 200px;
-  height: 200px; }
+  height: 350px; }
   .letter_container * {
     position: absolute;
     bottom: 0;
@@ -25,7 +25,8 @@ body {
     width: 180px;
     background: transparent;
     left: 50%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    z-index: 2; }
     .letter_container .note .piece {
       display: inline-block;
       color: black;
@@ -73,19 +74,20 @@ body {
             transform: rotateX(180deg); }
           .letter_container .note .piece.container .part.folded {
             transition-duration: 0.3s;
-            transform-style: preserve-3d;
-            z-index: 2; }
+            transform-style: preserve-3d; }
             .letter_container .note .piece.container .part.folded.bottom {
               transform: rotateX(180deg); }
             .letter_container .note .piece.container .part.folded.top {
               transform: rotateX(-180deg); }
     .letter_container .note.moved {
-      transition-duration: 0.25s;
+      transition-duration: 1s;
       transition-delay: 0.6s;
-      transform: translate(-50%, 120%); }
+      transform: translate(-50%, 120%);
+      transform: translate(-50%, 133.33333%); }
   .letter_container .envelope_container {
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    left: 0; }
     .letter_container .envelope_container .main {
       width: 100%;
       height: 100px;
@@ -100,8 +102,8 @@ body {
       z-index: 0; }
       .letter_container .envelope_container .top_container.closed {
         z-index: 2;
-        transition: z-index 0.5s;
-        transition-delay: 0.5s; }
+        transition: z-index 0.3s;
+        transition-delay: 1.6s; }
       .letter_container .envelope_container .top_container .top {
         position: relative;
         display: inline-block;
@@ -110,8 +112,8 @@ body {
         transform: rotateX(0);
         transform-origin: bottom;
         transform-style: preserve-3d;
-        transition: all 0.5s;
-        transition-delay: 0.5s; }
+        transition: all 0.15s;
+        transition-delay: 1.6s; }
         .letter_container .envelope_container .top_container .top .inside, .letter_container .envelope_container .top_container .top .outside {
           position: absolute;
           left: 0;
@@ -126,16 +128,15 @@ body {
           border-bottom: 50px solid red;
           transform: rotateX(0deg); }
         .letter_container .envelope_container .top_container .top.closed {
-          transition-delay: 0.85s;
-          transition-duration: 0.5s;
+          transition-duration: 0.3s;
           transform: rotateX(180deg);
           transform-origin: bottom;
           transform-style: preserve-3d;
-          z-index: 2; }
+          z-index: 3; }
     .letter_container .envelope_container .left, .letter_container .envelope_container .right {
       height: 50px;
       border-top: 50px solid transparent;
-      z-index: 2; }
+      z-index: 3; }
     .letter_container .envelope_container .left {
       left: 0;
       border-left: 100px solid white; }

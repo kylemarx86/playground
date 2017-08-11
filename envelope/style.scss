@@ -1,9 +1,9 @@
 $primary-color: #333;
 $env-h: 50px;
 $env-w: 100px;
-$piece-ht: 100% / 3;
+$piece-h: 100% / 3;
 $piece-trans-time: 0.3s;
-$note-trans-time: 0.25s;
+$note-trans-time: 1s;
 $envelope-trans-time: 0.3s;
 
 html, body{
@@ -15,13 +15,11 @@ body{
     background-color: $primary-color;
 }
 
-
-
 .letter_container{
     position: relative;
     display: block;
     width: 200px;
-    height: 200px;
+    height: 350px;
     * {
         position: absolute;
         bottom: 0;
@@ -29,22 +27,6 @@ body{
         height: 0;
         background-color: transparent;
     }
-    .note{
-        // position: absolute;
-        // display: inline-block;
-        // width: 170px;
-        // height: 87px;
-        // background: yellow;
-        // top: 0;
-        // left: 50%;
-        // transform: translate(-50%, -10%);
-        // z-index: 1;
-        // &.moved{
-        //     transition-duration: 0.5s;
-        //     transform: translate(-50%, 120%);
-        // }
-    }
-
 
     // note
     .note{
@@ -56,11 +38,12 @@ body{
         background: transparent;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 2;
 
         .piece{
             display: inline-block;
             color: black;
-            height: $piece-ht;
+            height: $piece-h;
             width: 100%;
             background: transparent;
             transform-style: preserve-3d;
@@ -90,7 +73,6 @@ body{
                     transform-style: preserve-3d;
                     
                     transition: all $piece-trans-time;
-                    // transition-delay: $piece-trans-time;     //time it takes note to move
                     &.bottom{
                         transform-origin: top;
                     }
@@ -117,14 +99,13 @@ body{
                     &.folded{
                         transition-duration: $piece-trans-time;
                         transform-style: preserve-3d;
-                        z-index: 2;     //not sure how necessary
+                        // z-index: 2;     //not sure how necessary
                         &.bottom{
                             transform: rotateX(180deg);
                             
                         }
                         &.top{
                             transform: rotateX(-180deg);
-                            // transition-delay: $piece-trans-time;
                         }
                     } // end folded
                 } // end part
@@ -134,13 +115,14 @@ body{
             transition-duration: $note-trans-time;
             transition-delay: $piece-trans-time * 2;    // two pieces folded;
             transform: translate(-50%, 120%);
+            transform: translate(-50%, 4 * $piece-h);
         }
     } // end note
-
 
     .envelope_container{
         display: inline-block;
         width: 100%;
+        left: 0;
 
         .main{
             width: 100%;
@@ -158,8 +140,8 @@ body{
 
             &.closed{
                 z-index: 2;
-                transition: z-index 0.5s;
-                transition-delay: 0.5s; // time for note to move
+                transition: z-index $envelope-trans-time;
+                transition-delay: $piece-trans-time * 2 + $note-trans-time;     //time it takes note to move into postion
             }
             .top{
                 position: relative;
@@ -171,14 +153,14 @@ body{
                 transform-origin: bottom;
                 transform-style: preserve-3d;
                 
-                transition: all 0.5s;
-                transition-delay: 0.5s;     //time it takes note to move
+                transition: all $envelope-trans-time / 2;
+                transition-delay: $piece-trans-time * 2 + $note-trans-time;     //time it takes note to move
                 
                 .inside, .outside{
                     position: absolute;
                     left: 0;
                     backface-visibility: hidden;
-                    transition: transform 0.3s;
+                    transition: transform $envelope-trans-time;
                     border-left: $env-w solid transparent;
                     border-right: $env-w solid transparent;
                 }
@@ -191,19 +173,19 @@ body{
                     transform: rotateX(0deg);
                 }
                 &.closed{
-                    transition-delay: $piece-trans-time * 2 + $note-trans-time;
-                    transition-duration: 0.5s;
+                    // transition-delay: $piece-trans-time * 2 + $note-trans-time;
+                    transition-duration: $envelope-trans-time;
                     transform: rotateX(180deg);
                     transform-origin:  bottom;
                     transform-style: preserve-3d;
-                    z-index: 2;
+                    z-index: 3;
                 } // end closed
             } // end top
         }
         .left, .right{
             height: $env-h;
             border-top: 50px solid transparent;
-            z-index: 2;
+            z-index: 3;
         }    
         .left{
             left: 0;
@@ -216,94 +198,6 @@ body{
         }
     } // end envelope
 }
-
-// // note
-// .note{
-//     perspective: 1000px;
-//     position: relative;
-//     display: inline-block;
-//     height: 150px;
-//     width: 180px;       // base it on letter width
-//     background: transparent;
-
-//     .piece{
-//         display: inline-block;
-//         color: black;
-//         height: $piece-ht;
-//         width: 100%;
-//         background: transparent;
-//         transform-style: preserve-3d;
-
-//         &:nth-of-type(2){
-//             background: white;
-//             top: 0;
-//             transform: translateY(100%);
-//         }
-//     }
-//     .container{
-//         perspective: 1000px;
-//         position: absolute;
-//         z-index: 0;
-//         &.bottom{
-//             bottom: 0
-//         }
-//         &.top{
-//             top: 0;
-//         }
-//         .part{
-//             position: relative;
-//             display: inline-block;
-//             width: 100%;
-//             height: 100%;
-            
-//             transform: rotateX(0);
-//             transform-style: preserve-3d;
-            
-//             transition: all $piece-trans-time;
-//             // transition-delay: $piece-trans-time;     //time it takes note to move
-//             &.bottom{
-//                 transform-origin: top;
-//             }
-//             &.top{
-//                 transform-origin: bottom;
-//                 transition-delay: $piece-trans-time;
-//             }
-//             .front, .back{
-//                 position: absolute;
-//                 height: 100%;
-//                 width: 100%;
-//                 background: white;
-//                 left: 0;
-//                 backface-visibility: hidden;
-//                 transition: transform 0.3s;
-//             }
-//             .front{
-//                 background: yellow;
-//                 transform: rotateX(0);
-//             }
-//             .back{
-//                 transform: rotateX(180deg);
-//             }
-//             &.folded{
-//                 transition-duration: $piece-trans-time;
-//                 transform-style: preserve-3d;
-//                 z-index: 2;     //not sure how necessary
-//                 &.bottom{
-//                     transform: rotateX(180deg);
-                    
-//                 }
-//                 &.top{
-//                     transform: rotateX(-180deg);
-//                     // transition-delay: $piece-trans-time;
-//                 }
-//             } // end folded
-//         } // end part
-//     }
-// } // end note
-
-
-
-
 
 .send{
     margin: 10px;
