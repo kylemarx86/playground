@@ -5,37 +5,21 @@ body, html{
   background: darkgray;
 }
 
-@mixin make-linear-gradient($colors...){
-    $length: length($colors);
-    // idea: take nth color, and make it cover 1/nth of the area
-    // first - 0% to 1/n%
-    // second - 1/n% to 2/n%
-    // third - 2/n% to 3/n%
-    // ...
-    // nth - 
-    // ...
-    // last - 1/length($colors) to 100%;
-    $main: "linear-gradient(to bottom, ";
-    @for $i from 0 to $length{
-        // store nth color at
 
-        $temp:  "linear-gradient(to bottom," + " red 10%, orange 11%, orange 50%, gray 51%)";
+// for each color in the list, create a band that is 1/nth the width of the container, where n is the number of colors in the array
+@mixin make-linear-gradient($colors...){
+    $base: "linear-gradient(to bottom ";
+    
+    @for $i from 0 to length($colors){
+        $temp: ", #{nth($colors, $i + 1)} #{($i) / length($colors) * 100}%, #{nth($colors, $i + 1)} #{($i + 1) / length($colors) * 100}%";
+        $base: $base + $temp;
     }
-    // background: 
-    //  nth($colors, length($colors));
+    $base: $base + ")";
+    background: unquote($base);
 }
 
 .main{
   width: 100%;
   height: 200px;
-  $colors: (red, blue, orange, yellow, green);
-  $base: "linear-gradient(to bottom ";
-
-  @for $i from 0 to length($colors){
-    $temp: ", #{nth($colors, $i + 1)} #{($i) / length($colors) * 100}%, #{nth($colors, $i + 1)} #{($i + 1) / length($colors) * 100}%";
-    $base: $base + $temp;
-  }
-  $base: $base + ")";
-  background: unquote($base);
-
+  @include make-linear-gradient(red, blue, orange, yellow, green);
 }
