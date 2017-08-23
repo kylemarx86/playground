@@ -53,13 +53,6 @@ body, html{
 
 // for each color in the list, create a band that is 1/nth the width of the container, where n is the number of colors in the array
 @mixin make-linear-gradient-forward-and-reverse-from-single-color($base-color, $steps){
-    // // create list of colors based on base-color
-    // // start color list
-    // $colors: ($base-color);
-    // @for $i from 1 to $steps {
-    //     $new-color: darken($base-color, 50 / $steps * ($i+1));
-    //     $colors: append($colors, $new-color);
-    // }
     // create list of colors based on base-color
     // start color list
     $colors: ($base-color);
@@ -81,20 +74,11 @@ body, html{
     }
     $base: $base + ")";
     background: unquote($base);
-    // content: type-of($colors);
 }
-
-
 
 .main{
   width: 100%;
   height: 200px;
-//   @include make-linear-gradient(red, blue, orange, yellow, green);
-    // $color-list: red, blue, orange, yellow;
-//   @include make-linear-gradient-forward-and-reverse(red, blue, orange);
-//   @include make-linear-gradient-forward-and-reverse-from-single-color(red, 5);
   @include make-linear-gradient-forward-and-reverse-from-single-color(darkred, 7);
-//   background: darken(blue, 10%);
-//   @include make-linear-gradient-forward-and-reverse-from-single-color(blue, 5);
 //   @include make-linear-gradient-forward-and-reverse($color-list);
 }
