@@ -1,0 +1,37 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+.header {
+  display: inline-block;
+  width: 100%; }
+
+#canvas {
+  display: inline-block;
+  width: 100%; }
+
+#main {
+  display: inline-block;
+  -webkit-animation: 100s scroll infinite linear;
+  -moz-animation: 100s scroll infinite linear;
+  -o-animation: 100s scroll infinite linear;
+  -ms-animation: 100s scroll infinite linear;
+  animation: 100s scroll infinite linear;
+  background: red; }
+  #main rect {
+    stroke: black; }
+  #main .name {
+    fill: red;
+    stroke: black; }
+
+#inner_triangles {
+  width: 50px;
+  height: 86px; }
+  #inner_triangles rect {
+    fill: #202020; }
+  #inner_triangles line {
+    stroke: black;
+    stroke-width: 1; }
+
+/*# sourceMappingURL=style.css.map */

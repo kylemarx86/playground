@@ -1,0 +1,46 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.header{
+    display: inline-block;
+    width: 100%;
+}
+
+#canvas{
+    display: inline-block;
+    width: 100%;
+}
+
+#main{
+    display: inline-block;
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+    background: red;
+    rect{
+        stroke: black;
+    }
+    .name{
+        fill: red;
+        stroke: black;
+    }
+
+}
+
+#inner_triangles{
+    width: 50px; 
+    height: 86px;
+
+    rect{
+        fill: #202020;
+
+    }
+    line{
+        stroke: black;
+        stroke-width: 1;
+    }
+}
