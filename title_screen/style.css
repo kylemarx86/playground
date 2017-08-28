@@ -1,10 +1,59 @@
+.skill {
+  position: absolute;
+  top: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-size: 2em; }
+  .skill:nth-of-type(1) {
+    right: -10%;
+    animation-name: move-skill-left;
+    animation-duration: 5s;
+    animation-delay: 4s; }
+  .skill:nth-of-type(2) {
+    top: 10%;
+    right: -10%;
+    animation-name: move-skill-right;
+    animation-duration: 5s;
+    animation-delay: 3.5s; }
+  .skill:nth-of-type(3) {
+    right: -10%;
+    animation-name: move-skill-left;
+    animation-duration: 5s;
+    animation-delay: 8s; }
+  .skill:nth-of-type(4) {
+    top: 10%;
+    right: -10%;
+    animation-name: move-skill-right;
+    animation-duration: 5s;
+    animation-delay: 5.5s; }
+  .skill:nth-of-type(5) {
+    right: -10%;
+    animation-name: move-skill-left;
+    animation-duration: 5s;
+    animation-delay: 12s; }
+
+@keyframes move-skill-left {
+  0% {
+    right: -10%; }
+  100% {
+    right: 110%; } }
+@keyframes move-skill-right {
+  0% {
+    left: -10%; }
+  100% {
+    left: 110%; } }
 body, html {
   margin: 0;
   height: 100%;
   width: 100%;
-  background: darkgray; }
+  background: darkgray;
+  position: relative;
+  overflow: hidden; }
 
 .main {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
   height: 200px;
   background: linear-gradient(to bottom , darkred 0%, darkred 7.14286%, #d40000 7.14286%, #d40000 14.28571%, #f80000 14.28571%, #f80000 21.42857%, #ff1e1e 21.42857%, #ff1e1e 28.57143%, #ff4242 28.57143%, #ff4242 35.71429%, #ff6767 35.71429%, #ff6767 42.85714%, #ff8b8b 42.85714%, #ff8b8b 50%, #ff8b8b 50%, #ff8b8b 57.14286%, #ff6767 57.14286%, #ff6767 64.28571%, #ff4242 64.28571%, #ff4242 71.42857%, #ff1e1e 71.42857%, #ff1e1e 78.57143%, #f80000 78.57143%, #f80000 85.71429%, #d40000 85.71429%, #d40000 92.85714%, darkred 92.85714%, darkred 100%); }

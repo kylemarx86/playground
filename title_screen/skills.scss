@@ -1,0 +1,46 @@
+$num-of-skills: 5;
+
+.skill{
+    position: absolute;
+    top: 0;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    font-size: 2em;
+
+    @for $i from 1 through $num-of-skills{
+        @if $i % 2 == 1 {
+            &:nth-of-type(#{$i}){
+                right: -10%;
+                animation-name: move-skill-left;
+                animation-duration: 5s;
+                animation-delay: #{2 * $i + 2}s;
+            }
+        }@else{
+            &:nth-of-type(#{$i}){
+                top: 10%;
+                right: -10%;
+                animation-name: move-skill-right;
+                animation-duration: 5s;
+                animation-delay: #{$i + 1.5}s;
+            }
+        }
+    }
+}
+
+@keyframes move-skill-left{
+    0%{
+        right: -10%;
+    }
+    100%{
+        right: 110%;
+    }
+}
+
+@keyframes move-skill-right{
+    0%{
+        left: -10%;
+    }
+    100%{
+        left: 110%;
+    }
+}
