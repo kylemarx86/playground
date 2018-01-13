@@ -1,13 +1,12 @@
-var tabs = document.getElementsByClassName('tab');
-
-Array.prototype.forEach.call(tabs, function(tab) {
-	tab.addEventListener('click', setActiveClass);
+$(document).ready(function(){
+    enableClickHandlers();
 });
 
-function setActiveClass(evt) {
-	Array.prototype.forEach.call(tabs, function(tab) {
-		tab.classList.remove('active');
-	});
-	
-	evt.currentTarget.classList.add('active');
+function enableClickHandlers(){
+    $('.tab').click(function(){
+        // remove the class active from other tabs in descendents of the parent
+        $(this).parent().find('.active').removeClass('active');
+        // toggle the class active on this
+        $(this).toggleClass('active');
+    })
 }
