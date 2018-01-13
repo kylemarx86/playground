@@ -1,3 +1,4 @@
+/* styling modified obtained from https://codepen.io/everdimension/pen/xZLggo*/
 .double.tabs {
   position: relative;
   background-color: #fff;
@@ -12,15 +13,15 @@
     float: left;
     width: 50%;
     text-align: center; }
-    .double.tabs .tabs__tab:nth-child(1).active ~ .tabs__presentation-slider {
-      left: calc(0%); }
-    .double.tabs .tabs__tab:nth-child(2).active ~ .tabs__presentation-slider {
-      left: calc(50%); }
-  .double.tabs .tabs__presentation-slider {
+    .double.tabs .tabs__tab:nth-child(1).active ~ .tabs__slider {
+      left: calc(2.5%); }
+    .double.tabs .tabs__tab:nth-child(2).active ~ .tabs__slider {
+      left: calc(52.5%); }
+  .double.tabs .tabs__slider {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50%;
+    width: 45%;
     height: 2px;
     background-color: #4A66F4;
     transition: left .25s; }
@@ -39,19 +40,19 @@
     float: left;
     width: 33.33333%;
     text-align: center; }
-    .triple.tabs .tabs__tab:nth-child(1).active ~ .tabs__presentation-slider {
-      left: calc(0%); }
-    .triple.tabs .tabs__tab:nth-child(2).active ~ .tabs__presentation-slider {
-      left: calc(33.33333%); }
-    .triple.tabs .tabs__tab:nth-child(3).active ~ .tabs__presentation-slider {
-      left: calc(66.66667%); }
-  .triple.tabs .tabs__presentation-slider {
+    .triple.tabs .tabs__tab:nth-child(1).active ~ .tabs__slider {
+      left: calc(1.66667%); }
+    .triple.tabs .tabs__tab:nth-child(2).active ~ .tabs__slider {
+      left: calc(35%); }
+    .triple.tabs .tabs__tab:nth-child(3).active ~ .tabs__slider {
+      left: calc(68.33333%); }
+  .triple.tabs .tabs__slider {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 33.33333%;
+    width: 30%;
     height: 2px;
-    background-color: #4A66F4;
+    background-color: red;
     transition: left .25s; }
 
 body {

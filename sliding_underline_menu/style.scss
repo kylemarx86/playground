@@ -1,5 +1,7 @@
-// $tab-count - number of tabs that will be in the navigation
-@mixin tab($tab-count){
+/* styling modified obtained from https://codepen.io/everdimension/pen/xZLggo*/
+// $tab-count : number of tabs that will be in the navigation
+// $underline-color : color of the line under the tab
+@mixin tab($tab-count, $underline-color: red){
     $tab-width: 100% / $tab-count;
 
     &.tabs {
@@ -19,25 +21,26 @@
             width: $tab-width;
             text-align: center;
             @for $i from 1 through $tab-count {
-                &:nth-child(#{$i}).active ~ .tabs__presentation-slider  {
-                    left: calc(#{$tab-width * ($i - 1)});
+                &:nth-child(#{$i}).active ~ .tabs__slider  {
+                    // left: calc(#{$tab-width * ($i - 1)});
+                    left: calc(#{$tab-width * ($i - 1) + .05 * $tab-width});
                 }
             }
         }
-        .tabs__presentation-slider {
+        .tabs__slider {
             position: absolute;
             bottom: 0;
             left: 0;
-            width: $tab-width;
+            width: $tab-width * .9;
             height: 2px;
-            background-color: #4A66F4;
+            background-color: $underline-color;
             transition: left .25s;
         }
     }
 }
 
 .double{
-    @include tab(2);
+    @include tab(2, #4A66F4);
 }
 .triple{
     @include tab(3);
