@@ -66,6 +66,10 @@ body {
   .Panel__body {
     background-color: #f2f2f2;
     padding: 10px 20px; }
+    .Panel__body .content {
+      display: initial; }
+      .Panel__body .content.hidden {
+        display: none; }
 
 .tab {
   font-family: 'Roboto Slab'; }
